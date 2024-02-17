@@ -23,6 +23,7 @@
 		C56A487C2B80DFA70045675F /* PlaylistsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56A487B2B80DFA70045675F /* PlaylistsView.swift */; };
 		C56A487E2B80DFBC0045675F /* PartiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56A487D2B80DFBC0045675F /* PartiesView.swift */; };
 		C56A48802B80DFE70045675F /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56A487F2B80DFE70045675F /* ProfileView.swift */; };
+		C56A48822B80E5F10045675F /* InputValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56A48812B80E5F10045675F /* InputValidator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		C56A487B2B80DFA70045675F /* PlaylistsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistsView.swift; sourceTree = "<group>"; };
 		C56A487D2B80DFBC0045675F /* PartiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartiesView.swift; sourceTree = "<group>"; };
 		C56A487F2B80DFE70045675F /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		C56A48812B80E5F10045675F /* InputValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputValidator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 		C56A48652B80DBB60045675F /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				C56A48812B80E5F10045675F /* InputValidator.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 				C56A487E2B80DFBC0045675F /* PartiesView.swift in Sources */,
 				C56A48692B80DBF00045675F /* SignUpView.swift in Sources */,
 				C56A48542B80D9AD0045675F /* MusicRoomApp.swift in Sources */,
+				C56A48822B80E5F10045675F /* InputValidator.swift in Sources */,
 				C56A48772B80DF0F0045675F /* HomeTabView.swift in Sources */,
 				C56A48672B80DBDF0045675F /* LoginView.swift in Sources */,
 				C56A48802B80DFE70045675F /* ProfileView.swift in Sources */,
