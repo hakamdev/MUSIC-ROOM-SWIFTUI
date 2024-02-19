@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C55D835A2B836EC5006C7DC8 /* Color+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55D83592B836EC5006C7DC8 /* Color+Extentions.swift */; };
+		C55D835C2B8376AE006C7DC8 /* OAuthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55D835B2B8376AE006C7DC8 /* OAuthButton.swift */; };
+		C55D835E2B8377E8006C7DC8 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55D835D2B8377E8006C7DC8 /* ActionButton.swift */; };
+		C55D83602B8379CF006C7DC8 /* PasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55D835F2B8379CF006C7DC8 /* PasswordField.swift */; };
+		C55D83622B837AD0006C7DC8 /* EmailField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55D83612B837AD0006C7DC8 /* EmailField.swift */; };
+		C55D83642B837B73006C7DC8 /* FieldErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55D83632B837B73006C7DC8 /* FieldErrorMessage.swift */; };
 		C56A48542B80D9AD0045675F /* MusicRoomApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56A48532B80D9AD0045675F /* MusicRoomApp.swift */; };
 		C56A48562B80D9AD0045675F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56A48552B80D9AD0045675F /* ContentView.swift */; };
 		C56A48582B80D9AE0045675F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C56A48572B80D9AE0045675F /* Assets.xcassets */; };
@@ -27,6 +33,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C55D83592B836EC5006C7DC8 /* Color+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extentions.swift"; sourceTree = "<group>"; };
+		C55D835B2B8376AE006C7DC8 /* OAuthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthButton.swift; sourceTree = "<group>"; };
+		C55D835D2B8377E8006C7DC8 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
+		C55D835F2B8379CF006C7DC8 /* PasswordField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordField.swift; sourceTree = "<group>"; };
+		C55D83612B837AD0006C7DC8 /* EmailField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailField.swift; sourceTree = "<group>"; };
+		C55D83632B837B73006C7DC8 /* FieldErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldErrorMessage.swift; sourceTree = "<group>"; };
 		C56A48502B80D9AD0045675F /* MusicRoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicRoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C56A48532B80D9AD0045675F /* MusicRoomApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicRoomApp.swift; sourceTree = "<group>"; };
 		C56A48552B80D9AD0045675F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,6 +70,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C55D83582B836EAF006C7DC8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C55D83592B836EC5006C7DC8 /* Color+Extentions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		C56A48472B80D9AD0045675F = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +97,7 @@
 		C56A48522B80D9AD0045675F /* MusicRoom */ = {
 			isa = PBXGroup;
 			children = (
+				C55D83582B836EAF006C7DC8 /* Extensions */,
 				C56A48652B80DBB60045675F /* Utils */,
 				C56A48642B80DBAE0045675F /* Models */,
 				C56A48632B80DBA60045675F /* ViewModels */,
@@ -110,6 +131,11 @@
 		C56A48622B80DB9E0045675F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C55D835B2B8376AE006C7DC8 /* OAuthButton.swift */,
+				C55D835D2B8377E8006C7DC8 /* ActionButton.swift */,
+				C55D835F2B8379CF006C7DC8 /* PasswordField.swift */,
+				C55D83612B837AD0006C7DC8 /* EmailField.swift */,
+				C55D83632B837B73006C7DC8 /* FieldErrorMessage.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -245,16 +271,22 @@
 				C56A48562B80D9AD0045675F /* ContentView.swift in Sources */,
 				C56A486B2B80DDB00045675F /* ResetPasswordFindAccount.swift in Sources */,
 				C56A486F2B80DDF20045675F /* ResetPasswordNewPassword.swift in Sources */,
+				C55D835E2B8377E8006C7DC8 /* ActionButton.swift in Sources */,
 				C56A48792B80DF7E0045675F /* HomeView.swift in Sources */,
+				C55D835C2B8376AE006C7DC8 /* OAuthButton.swift in Sources */,
+				C55D83602B8379CF006C7DC8 /* PasswordField.swift in Sources */,
 				C56A487C2B80DFA70045675F /* PlaylistsView.swift in Sources */,
 				C56A487E2B80DFBC0045675F /* PartiesView.swift in Sources */,
+				C55D83642B837B73006C7DC8 /* FieldErrorMessage.swift in Sources */,
 				C56A48692B80DBF00045675F /* SignUpView.swift in Sources */,
 				C56A48542B80D9AD0045675F /* MusicRoomApp.swift in Sources */,
 				C56A48822B80E5F10045675F /* InputValidator.swift in Sources */,
 				C56A48772B80DF0F0045675F /* HomeTabView.swift in Sources */,
+				C55D835A2B836EC5006C7DC8 /* Color+Extentions.swift in Sources */,
 				C56A48672B80DBDF0045675F /* LoginView.swift in Sources */,
 				C56A48802B80DFE70045675F /* ProfileView.swift in Sources */,
 				C56A48742B80DE890045675F /* SpotifyAuthentication.swift in Sources */,
+				C55D83622B837AD0006C7DC8 /* EmailField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

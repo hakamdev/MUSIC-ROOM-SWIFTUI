@@ -11,7 +11,7 @@ import SwiftUI
 struct MusicRoomApp: App {
     var body: some Scene {
         WindowGroup {
-            LoginView()
+            SignUpView()
         }
     }
 }

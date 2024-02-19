@@ -13,8 +13,14 @@ struct LoginView: View {
     @State private var emailErrorMsg: String?
     @State private var passwordErrorMsg: String?
     
+    func validateInput() -> Bool {
+        emailErrorMsg = InputValidator.validateEmail(email)
+        passwordErrorMsg = InputValidator.validatePassword(password)
+        return emailErrorMsg == nil && passwordErrorMsg == nil
+    }
+    
     func tryLogin() {
-        guard emailErrorMsg == nil, passwordErrorMsg == nil else {
+        guard validateInput() else {
             return
         }
         
@@ -22,10 +28,11 @@ struct LoginView: View {
     }
     
     var body: some View {
-        VStack(spacing: 24) {
+        VStack {
             
             Spacer()
             
+            // MARK: - Logo Section
             Image("ic_logo")
                 .resizable()
                 .symbolRenderingMode(.monochrome)
@@ -34,64 +41,87 @@ struct LoginView: View {
             
             Spacer()
             Spacer()
-
-            TextField("Email", text: $email)
-                    .onSubmit {
-                        emailErrorMsg = InputValidator.validateEmail(email)
-                    }
-                    .textInputAutocapitalization(.never)
-                    .disableAutocorrection(true)
-                    .padding(.horizontal)
-                    .padding(.vertical, 16)
-                    .background(.gray.opacity(0.3))
-                    .cornerRadius(8)
-                
-                SecureField("Password", text: $password)
-                    .onSubmit {
-                        passwordErrorMsg = InputValidator.validatePassword(password)
-                    }
-                    .textInputAutocapitalization(.never)
-                    .disableAutocorrection(true)
-                    .padding(.horizontal)
-                    .padding(.vertical, 16)
-                    .background(.gray.opacity(0.3))
-                    .cornerRadius(8)
             
+            // MARK: - Email Input Section
+            EmailField(hint: "Email", email: $email)
+                .onChange(of: email) {
+                    emailErrorMsg = nil
+                }
+
+            if (emailErrorMsg != nil) {
+                Spacer().frame(height: 8)
+                FieldErrorMessage(message: emailErrorMsg!)
+            }
+            
+            Spacer().frame(height: 24)
+
+            // MARK: - Password Input Section
+            PasswordField(hint: "Password", password: $password)
+                .onChange(of: password) {
+                    passwordErrorMsg = nil
+                }
+            
+            if (passwordErrorMsg != nil) {
+                Spacer().frame(height: 8)
+                FieldErrorMessage(message: passwordErrorMsg!)
+            }
+            
+            Spacer().frame(height: 16)
+            
+            // MARK: - Forgot Password Section
             HStack {
+                Spacer()
+                
                 Button {
-                    
+                    // action
                 } label: {
                     Text("Forgot Password?")
                         .fontWeight(.semibold)
+                        .foregroundColor(Color(UIColor.label))
                 }
                 
-                Spacer()
+                
             }
             
             Spacer()
             Spacer()
 
-            Button {
-                
-            } label: {
-                Text("Log in")
-                    .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
-                    .padding(.horizontal)
-                    .padding(.vertical, 16)
-                    .fontWeight(.semibold)
-                    .foregroundColor(.white)
-                    .background(Color("mainColor").gradient)
-                    .cornerRadius(8)
+            // MARK: - Login Button Section
+            ActionButton(label: "Login") {
+                tryLogin()
             }
             
+            Spacer().frame(height: 16)
+            
+            // MARK: - Signup Button Section
             Button {
-                
+                // action
             } label: {
                 Text("Sign up")
                     .fontWeight(.semibold)
+                    .foregroundColor(Color(UIColor.label))
             }
             
-            Spacer()
+            Spacer().frame(height: 42)
+            
+            RoundedRectangle(cornerRadius: 2)
+                .frame(width: 50, height: 2)
+                .foregroundColor(.gray.opacity(0.3))
+            
+            Spacer().frame(height: 24)
+            
+            // MARK: - OAuth Buttons Section
+            HStack {
+                OAuthButton(icon: "ic_ggl", label: "Google") {
+                    // action
+                }
+                
+                OAuthButton(icon: "ic_fb", label: "Facebook") {
+                    // action
+                }
+            }
+            
+            // Spacer()
             
         }
         .padding(24)
