@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		C55D83602B8379CF006C7DC8 /* PasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55D835F2B8379CF006C7DC8 /* PasswordField.swift */; };
 		C55D83622B837AD0006C7DC8 /* EmailField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55D83612B837AD0006C7DC8 /* EmailField.swift */; };
 		C55D83642B837B73006C7DC8 /* FieldErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55D83632B837B73006C7DC8 /* FieldErrorMessage.swift */; };
+		C567E9842B874F8A00A325AA /* SpotifyiOS in Frameworks */ = {isa = PBXBuildFile; productRef = C567E9832B874F8A00A325AA /* SpotifyiOS */; };
+		C567E9862B87504000A325AA /* SpotifyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C567E9852B87504000A325AA /* SpotifyController.swift */; };
 		C56A48542B80D9AD0045675F /* MusicRoomApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56A48532B80D9AD0045675F /* MusicRoomApp.swift */; };
 		C56A48562B80D9AD0045675F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56A48552B80D9AD0045675F /* ContentView.swift */; };
 		C56A48582B80D9AE0045675F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C56A48572B80D9AE0045675F /* Assets.xcassets */; };
@@ -39,6 +41,9 @@
 		C55D835F2B8379CF006C7DC8 /* PasswordField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordField.swift; sourceTree = "<group>"; };
 		C55D83612B837AD0006C7DC8 /* EmailField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailField.swift; sourceTree = "<group>"; };
 		C55D83632B837B73006C7DC8 /* FieldErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldErrorMessage.swift; sourceTree = "<group>"; };
+		C55D8B142B8757E7008AFA9C /* MusicRoom-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MusicRoom-Bridging-Header.h"; sourceTree = "<group>"; };
+		C567E9852B87504000A325AA /* SpotifyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyController.swift; sourceTree = "<group>"; };
+		C567E9872B8752FE00A325AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C56A48502B80D9AD0045675F /* MusicRoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicRoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C56A48532B80D9AD0045675F /* MusicRoomApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicRoomApp.swift; sourceTree = "<group>"; };
 		C56A48552B80D9AD0045675F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C567E9842B874F8A00A325AA /* SpotifyiOS in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +87,7 @@
 		C56A48472B80D9AD0045675F = {
 			isa = PBXGroup;
 			children = (
+				C55D8B142B8757E7008AFA9C /* MusicRoom-Bridging-Header.h */,
 				C56A48522B80D9AD0045675F /* MusicRoom */,
 				C56A48512B80D9AD0045675F /* Products */,
 			);
@@ -97,6 +104,7 @@
 		C56A48522B80D9AD0045675F /* MusicRoom */ = {
 			isa = PBXGroup;
 			children = (
+				C567E9872B8752FE00A325AA /* Info.plist */,
 				C55D83582B836EAF006C7DC8 /* Extensions */,
 				C56A48652B80DBB60045675F /* Utils */,
 				C56A48642B80DBAE0045675F /* Models */,
@@ -143,6 +151,7 @@
 		C56A48632B80DBA60045675F /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				C567E9852B87504000A325AA /* SpotifyController.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -212,6 +221,9 @@
 			dependencies = (
 			);
 			name = MusicRoom;
+			packageProductDependencies = (
+				C567E9832B874F8A00A325AA /* SpotifyiOS */,
+			);
 			productName = MusicRoom;
 			productReference = C56A48502B80D9AD0045675F /* MusicRoom.app */;
 			productType = "com.apple.product-type.application";
@@ -240,6 +252,9 @@
 				Base,
 			);
 			mainGroup = C56A48472B80D9AD0045675F;
+			packageReferences = (
+				C567E9822B874F8A00A325AA /* XCLocalSwiftPackageReference "../../Downloads/ios-sdk-master" */,
+			);
 			productRefGroup = C56A48512B80D9AD0045675F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -282,6 +297,7 @@
 				C56A48542B80D9AD0045675F /* MusicRoomApp.swift in Sources */,
 				C56A48822B80E5F10045675F /* InputValidator.swift in Sources */,
 				C56A48772B80DF0F0045675F /* HomeTabView.swift in Sources */,
+				C567E9862B87504000A325AA /* SpotifyController.swift in Sources */,
 				C55D835A2B836EC5006C7DC8 /* Color+Extentions.swift in Sources */,
 				C56A48672B80DBDF0045675F /* LoginView.swift in Sources */,
 				C56A48802B80DFE70045675F /* ProfileView.swift in Sources */,
@@ -423,19 +439,23 @@
 				DEVELOPMENT_TEAM = P57KUX42FG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MusicRoom/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Music Room";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hakamdev.MusicRoom;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "MusicRoom-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -452,19 +472,23 @@
 				DEVELOPMENT_TEAM = P57KUX42FG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MusicRoom/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Music Room";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hakamdev.MusicRoom;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "MusicRoom-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -492,6 +516,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		C567E9822B874F8A00A325AA /* XCLocalSwiftPackageReference "../../Downloads/ios-sdk-master" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "../../Downloads/ios-sdk-master";
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C567E9832B874F8A00A325AA /* SpotifyiOS */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SpotifyiOS;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C56A48482B80D9AD0045675F /* Project object */;
 }
