@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var navigation: NavigationViewModel
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Button(action: {
+                navigation.path.append("login")
+            }, label: {
+                Text("Go to login")
+            })
         }
         .padding()
     }
@@ -21,4 +24,5 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
+        .environmentObject(NavigationViewModel())
 }

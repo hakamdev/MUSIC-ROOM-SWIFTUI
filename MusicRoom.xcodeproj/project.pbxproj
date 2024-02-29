@@ -13,6 +13,7 @@
 		C55D83602B8379CF006C7DC8 /* PasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55D835F2B8379CF006C7DC8 /* PasswordField.swift */; };
 		C55D83622B837AD0006C7DC8 /* EmailField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55D83612B837AD0006C7DC8 /* EmailField.swift */; };
 		C55D83642B837B73006C7DC8 /* FieldErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55D83632B837B73006C7DC8 /* FieldErrorMessage.swift */; };
+		C55D8B162B879B76008AFA9C /* MusicPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55D8B152B879B76008AFA9C /* MusicPlayerView.swift */; };
 		C567E9842B874F8A00A325AA /* SpotifyiOS in Frameworks */ = {isa = PBXBuildFile; productRef = C567E9832B874F8A00A325AA /* SpotifyiOS */; };
 		C567E9862B87504000A325AA /* SpotifyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C567E9852B87504000A325AA /* SpotifyController.swift */; };
 		C56A48542B80D9AD0045675F /* MusicRoomApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56A48532B80D9AD0045675F /* MusicRoomApp.swift */; };
@@ -27,11 +28,15 @@
 		C56A48722B80DE4B0045675F /* NewPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56A48712B80DE4B0045675F /* NewPassword.swift */; };
 		C56A48742B80DE890045675F /* SpotifyAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56A48732B80DE890045675F /* SpotifyAuthentication.swift */; };
 		C56A48772B80DF0F0045675F /* HomeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56A48762B80DF0F0045675F /* HomeTabView.swift */; };
-		C56A48792B80DF7E0045675F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56A48782B80DF7E0045675F /* HomeView.swift */; };
+		C56A48792B80DF7E0045675F /* PartiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56A48782B80DF7E0045675F /* PartiesView.swift */; };
 		C56A487C2B80DFA70045675F /* PlaylistsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56A487B2B80DFA70045675F /* PlaylistsView.swift */; };
-		C56A487E2B80DFBC0045675F /* PartiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56A487D2B80DFBC0045675F /* PartiesView.swift */; };
 		C56A48802B80DFE70045675F /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56A487F2B80DFE70045675F /* ProfileView.swift */; };
 		C56A48822B80E5F10045675F /* InputValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56A48812B80E5F10045675F /* InputValidator.swift */; };
+		C5813BF02B8908B3009B6379 /* NavigationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5813BEF2B8908B3009B6379 /* NavigationViewModel.swift */; };
+		C58FA9F82B8BF29E00BCBAAB /* MyContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58FA9F72B8BF29E00BCBAAB /* MyContentView.swift */; };
+		C5C673662B8A0A0600D067ED /* SwiftUIIntrospect in Frameworks */ = {isa = PBXBuildFile; productRef = C5C673652B8A0A0600D067ED /* SwiftUIIntrospect */; };
+		C5C673682B8A119400D067ED /* ProfileIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C673672B8A119400D067ED /* ProfileIcon.swift */; };
+		C5D7CEED2B90CDAB00091D00 /* PartyLargeItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D7CEEC2B90CDAB00091D00 /* PartyLargeItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +47,7 @@
 		C55D83612B837AD0006C7DC8 /* EmailField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailField.swift; sourceTree = "<group>"; };
 		C55D83632B837B73006C7DC8 /* FieldErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldErrorMessage.swift; sourceTree = "<group>"; };
 		C55D8B142B8757E7008AFA9C /* MusicRoom-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MusicRoom-Bridging-Header.h"; sourceTree = "<group>"; };
+		C55D8B152B879B76008AFA9C /* MusicPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerView.swift; sourceTree = "<group>"; };
 		C567E9852B87504000A325AA /* SpotifyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyController.swift; sourceTree = "<group>"; };
 		C567E9872B8752FE00A325AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C56A48502B80D9AD0045675F /* MusicRoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicRoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,11 +63,14 @@
 		C56A48712B80DE4B0045675F /* NewPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPassword.swift; sourceTree = "<group>"; };
 		C56A48732B80DE890045675F /* SpotifyAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyAuthentication.swift; sourceTree = "<group>"; };
 		C56A48762B80DF0F0045675F /* HomeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabView.swift; sourceTree = "<group>"; };
-		C56A48782B80DF7E0045675F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		C56A48782B80DF7E0045675F /* PartiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartiesView.swift; sourceTree = "<group>"; };
 		C56A487B2B80DFA70045675F /* PlaylistsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistsView.swift; sourceTree = "<group>"; };
-		C56A487D2B80DFBC0045675F /* PartiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartiesView.swift; sourceTree = "<group>"; };
 		C56A487F2B80DFE70045675F /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		C56A48812B80E5F10045675F /* InputValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputValidator.swift; sourceTree = "<group>"; };
+		C5813BEF2B8908B3009B6379 /* NavigationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewModel.swift; sourceTree = "<group>"; };
+		C58FA9F72B8BF29E00BCBAAB /* MyContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyContentView.swift; sourceTree = "<group>"; };
+		C5C673672B8A119400D067ED /* ProfileIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileIcon.swift; sourceTree = "<group>"; };
+		C5D7CEEC2B90CDAB00091D00 /* PartyLargeItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyLargeItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +79,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C567E9842B874F8A00A325AA /* SpotifyiOS in Frameworks */,
+				C5C673662B8A0A0600D067ED /* SwiftUIIntrospect in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +154,8 @@
 				C55D835F2B8379CF006C7DC8 /* PasswordField.swift */,
 				C55D83612B837AD0006C7DC8 /* EmailField.swift */,
 				C55D83632B837B73006C7DC8 /* FieldErrorMessage.swift */,
+				C5C673672B8A119400D067ED /* ProfileIcon.swift */,
+				C5D7CEEC2B90CDAB00091D00 /* PartyLargeItemView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -152,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				C567E9852B87504000A325AA /* SpotifyController.swift */,
+				C5813BEF2B8908B3009B6379 /* NavigationViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -191,6 +204,7 @@
 				C56A487A2B80DF830045675F /* Tabs */,
 				C56A48762B80DF0F0045675F /* HomeTabView.swift */,
 				C56A487F2B80DFE70045675F /* ProfileView.swift */,
+				C55D8B152B879B76008AFA9C /* MusicPlayerView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -198,9 +212,9 @@
 		C56A487A2B80DF830045675F /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
-				C56A48782B80DF7E0045675F /* HomeView.swift */,
+				C56A48782B80DF7E0045675F /* PartiesView.swift */,
 				C56A487B2B80DFA70045675F /* PlaylistsView.swift */,
-				C56A487D2B80DFBC0045675F /* PartiesView.swift */,
+				C58FA9F72B8BF29E00BCBAAB /* MyContentView.swift */,
 			);
 			path = Tabs;
 			sourceTree = "<group>";
@@ -223,6 +237,7 @@
 			name = MusicRoom;
 			packageProductDependencies = (
 				C567E9832B874F8A00A325AA /* SpotifyiOS */,
+				C5C673652B8A0A0600D067ED /* SwiftUIIntrospect */,
 			);
 			productName = MusicRoom;
 			productReference = C56A48502B80D9AD0045675F /* MusicRoom.app */;
@@ -254,6 +269,7 @@
 			mainGroup = C56A48472B80D9AD0045675F;
 			packageReferences = (
 				C567E9822B874F8A00A325AA /* XCLocalSwiftPackageReference "../../Downloads/ios-sdk-master" */,
+				C5C673642B8A0A0600D067ED /* XCRemoteSwiftPackageReference "swiftui-introspect" */,
 			);
 			productRefGroup = C56A48512B80D9AD0045675F /* Products */;
 			projectDirPath = "";
@@ -281,21 +297,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5813BF02B8908B3009B6379 /* NavigationViewModel.swift in Sources */,
+				C55D8B162B879B76008AFA9C /* MusicPlayerView.swift in Sources */,
 				C56A486D2B80DDD90045675F /* ResetPasswordVerificationCode.swift in Sources */,
 				C56A48722B80DE4B0045675F /* NewPassword.swift in Sources */,
 				C56A48562B80D9AD0045675F /* ContentView.swift in Sources */,
 				C56A486B2B80DDB00045675F /* ResetPasswordFindAccount.swift in Sources */,
 				C56A486F2B80DDF20045675F /* ResetPasswordNewPassword.swift in Sources */,
 				C55D835E2B8377E8006C7DC8 /* ActionButton.swift in Sources */,
-				C56A48792B80DF7E0045675F /* HomeView.swift in Sources */,
+				C56A48792B80DF7E0045675F /* PartiesView.swift in Sources */,
+				C58FA9F82B8BF29E00BCBAAB /* MyContentView.swift in Sources */,
 				C55D835C2B8376AE006C7DC8 /* OAuthButton.swift in Sources */,
 				C55D83602B8379CF006C7DC8 /* PasswordField.swift in Sources */,
 				C56A487C2B80DFA70045675F /* PlaylistsView.swift in Sources */,
-				C56A487E2B80DFBC0045675F /* PartiesView.swift in Sources */,
+				C5C673682B8A119400D067ED /* ProfileIcon.swift in Sources */,
 				C55D83642B837B73006C7DC8 /* FieldErrorMessage.swift in Sources */,
 				C56A48692B80DBF00045675F /* SignUpView.swift in Sources */,
 				C56A48542B80D9AD0045675F /* MusicRoomApp.swift in Sources */,
 				C56A48822B80E5F10045675F /* InputValidator.swift in Sources */,
+				C5D7CEED2B90CDAB00091D00 /* PartyLargeItemView.swift in Sources */,
 				C56A48772B80DF0F0045675F /* HomeTabView.swift in Sources */,
 				C567E9862B87504000A325AA /* SpotifyController.swift in Sources */,
 				C55D835A2B836EC5006C7DC8 /* Color+Extentions.swift in Sources */,
@@ -524,10 +544,26 @@
 		};
 /* End XCLocalSwiftPackageReference section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		C5C673642B8A0A0600D067ED /* XCRemoteSwiftPackageReference "swiftui-introspect" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/siteline/swiftui-introspect";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		C567E9832B874F8A00A325AA /* SpotifyiOS */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = SpotifyiOS;
+		};
+		C5C673652B8A0A0600D067ED /* SwiftUIIntrospect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C5C673642B8A0A0600D067ED /* XCRemoteSwiftPackageReference "swiftui-introspect" */;
+			productName = SwiftUIIntrospect;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

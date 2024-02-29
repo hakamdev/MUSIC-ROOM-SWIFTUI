@@ -17,11 +17,13 @@ class SpotifyController: NSObject, ObservableObject {
     private var connectCancellable: AnyCancellable?
     private var disconnectCancellable: AnyCancellable?
     
+    var timer = Timer()
+    
     // Player state variables
     var playURI = ""
-    var currentTrack: SPTAppRemoteTrack?
-    var isPaused: Bool = true
-    var playerPosition: Int = 0
+    @Published var currentTrack: SPTAppRemoteTrack?
+    @Published var isPaused: Bool = true
+    @Published var playbackPosition: Int = 0
     
     // Create config object with clientID and redirection URL
     lazy var configuration = SPTConfiguration(
@@ -40,11 +42,11 @@ class SpotifyController: NSObject, ObservableObject {
     // Listen for UIApplication lifecycle events and connect or disconnect from Spotify App.
     override init() {
         super.init()
-        connectCancellable = NotificationCenter.default.publisher(for: UIApplication.didBecomeActiveNotification)
-            .receive(on: DispatchQueue.main)
-            .sink { _ in
-                self.connect()
-            }
+//        connectCancellable = NotificationCenter.default.publisher(for: UIApplication.didBecomeActiveNotification)
+//            .receive(on: DispatchQueue.main)
+//            .sink { _ in
+//                self.connect(uri: "")
+//            }
         
         disconnectCancellable = NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification)
             .receive(on: DispatchQueue.main)
@@ -55,17 +57,11 @@ class SpotifyController: NSObject, ObservableObject {
     }
     
     func playTrack(withURI uri: String) {
-        //        if let _ = self.appRemote.connectionParameters.accessToken {
-        //            self.appRemote.authorizeAndPlayURI("")
-        //            return
-        //        }
-        //
-        //        self.appRemote.authorizeAndPlayURI("")
+        playURI = uri
         if !appRemote.isConnected {
-            self.connect()
+            self.connect(uri: uri)
             return
         }
-        
         self.appRemote.playerAPI?.play(uri, asRadio: false) { data, error in
             print("Playing \(uri)")
             print(data ?? "")
@@ -86,9 +82,9 @@ class SpotifyController: NSObject, ObservableObject {
     }
     
     // Connect to Spotify app or play music if already connected.
-    func connect() {
+    func connect(uri: String) {
         guard let _ = self.appRemote.connectionParameters.accessToken else {
-            self.appRemote.authorizeAndPlayURI("")
+            self.appRemote.authorizeAndPlayURI(uri)
             return
         }
         appRemote.connect()
@@ -97,7 +93,13 @@ class SpotifyController: NSObject, ObservableObject {
     // If connected, disconnect from Spotify App
     func disconnect() {
         if appRemote.isConnected {
-            appRemote.disconnect()
+            if (!isPaused) {
+                appRemote.playerAPI?.pause({ _, err in
+                    self.appRemote.disconnect()
+                })
+            } else {
+                appRemote.disconnect()
+            }
         }
     }
 }
@@ -113,10 +115,6 @@ extension SpotifyController: SPTAppRemoteDelegate, SPTAppRemotePlayerStateDelega
                 debugPrint(error.localizedDescription)
             }
         })
-        
-//        self.appRemote.contentAPI?.fetchContentItem(forURI: "", callback: { data, error in
-//            
-//        })
     }
     
     func appRemote(_ appRemote: SPTAppRemote, didFailConnectionAttemptWithError error: Error?) {
@@ -130,6 +128,20 @@ extension SpotifyController: SPTAppRemoteDelegate, SPTAppRemotePlayerStateDelega
     }
     
     func playerStateDidChange(_ playerState: SPTAppRemotePlayerState) {
-        print("player did change \(playerState.track.name)")
+        self.currentTrack = playerState.track
+        self.isPaused = playerState.isPaused
+        self.playbackPosition = playerState.playbackPosition
+        //print("player did change \(playerState.track.name)")
+        startTimer()
+    }
+    
+    func startTimer() {
+        timer.invalidate()
+        if self.isPaused {
+            return
+        }
+        self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { _ in
+            self.playbackPosition = self.playbackPosition + 1000
+        })
     }
 }

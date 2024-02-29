@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct SignUpView: View {
+    @EnvironmentObject var navigation: NavigationViewModel
+    
     @State private var email: String = ""
     @State private var password: String = ""
     @State private var password2: String = ""
@@ -87,7 +89,8 @@ struct SignUpView: View {
 
             // MARK: - Login Button Section
             ActionButton(label: "Sign up") {
-                trySignup()
+                //trySignup()
+                navigation.path.append("home")
             }
             
             Spacer().frame(height: 16)
@@ -95,6 +98,9 @@ struct SignUpView: View {
             // MARK: - Signup Button Section
             Button {
                 // action
+//                navigation.path.popLast()
+                navigation.path.replace(["signup"], with: ["login"], maxReplacements: 1)
+                // navigation.path.append("login")
             } label: {
                 Text("Log in")
                     .fontWeight(.semibold)

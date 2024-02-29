@@ -9,7 +9,24 @@ import SwiftUI
 
 struct HomeTabView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        TabView {
+            PartiesView()
+                .tabItem {
+                    Image(systemName: "party.popper.fill")
+                }
+            
+            PlaylistsView()
+                .tabItem {
+                    Image(systemName: "play.square.stack.fill")
+                }
+            
+            MyContentView()
+                .tabItem {
+                    Image(systemName: "music.note.house.fill")
+                }
+            
+        }
+        .accentColor(.mainColor)
     }
 }
 
